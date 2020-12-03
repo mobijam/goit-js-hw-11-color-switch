@@ -23,4 +23,5 @@ function timerStart() {
 
 function timerStop() {
   clearInterval(intervalId);
+  refs.startBtn.removeAttribute('disabled');
 }
