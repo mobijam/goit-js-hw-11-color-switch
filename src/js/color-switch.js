@@ -13,17 +13,14 @@ let intervalId = null;
 
 function timerStart() {
   if (!changesHasStarted) {
-      
+    refs.startBtn.setAttribute('disabled', 'true');
     changesHasStarted = true;
     intervalId = setInterval(() => {
         refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length -1)]
     }, COLOR_SWITCH_DELAY);
   }
-
-  return
 }
 
 function timerStop() {
   clearInterval(intervalId);
-  changesHasStarted;
 }
